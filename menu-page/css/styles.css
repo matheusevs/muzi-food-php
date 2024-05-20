@@ -56,12 +56,6 @@ header, .navbar {
     width: 100%;
 }
 
-.navbar-center {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 .img {
     width: 100%;
     height: 100%; 
@@ -79,4 +73,9 @@ header, .navbar {
     padding: 1px;
     display: flex;
     justify-content: center;
+}
+
+.card-price {
+    font: 20px bold;
+    font-family: 'Roboto', sans-serif;
 }
