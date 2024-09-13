@@ -1,7 +1,6 @@
 <?php 
     date_default_timezone_set('America/Sao_Paulo');
-    define('RELATIVE_PATH_PUBLIC', __DIR__);
-    require_once RELATIVE_PATH_PUBLIC . '/../routes/Routes.php';
+    require_once '../routes/Routes.php';
     $router = new Router();
 ?>
 
