@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-class ContactController {
+class Users {
 
     public function __construct()
     {

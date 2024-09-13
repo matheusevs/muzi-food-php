@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-class ContactController {
+class Clients {
 
     public function __construct()
     {
