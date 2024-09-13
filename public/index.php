@@ -1,3 +1,10 @@
+<?php 
+    date_default_timezone_set('America/Sao_Paulo');
+    define('RELATIVE_PATH_PUBLIC', __DIR__);
+    require_once RELATIVE_PATH_PUBLIC . '/../routes/Routes.php';
+    $router = new Router();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/home-page/css/styles.css">
+    <link rel="stylesheet" href="/home-page/css/styles.css">
     <!--Scripts-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -28,11 +35,11 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
             <div class="navbar-nav mx-auto">
-                <a href="./views/menu-page.php" class="nav-item nav-link" id="menu">Cardápio</a>
-                <a href="./views/contact-page.php" class="nav-item nav-link" id="contact-menu">Contato</a>
+                <a href="cardapio" class="nav-item nav-link" id="menu">Cardápio</a>
+                <a href="contato" class="nav-item nav-link" id="contact-menu">Contato</a>
             </div>
             <div class="navbar-nav">
-                <a href="./views/login-page.php" class="nav-item nav-link" id="acess-menu">Login/Registrar</a>
+                <a href="login" class="nav-item nav-link" id="acess-menu">Login/Registrar</a>
             </div>
         </div>
     </nav>
@@ -42,13 +49,13 @@
                 <div id="carouselExampleFade" class="carousel slide carousel-fade">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="100">
-                            <img src="./assets/home-page/img/img-carousel-1.png" class="d-block w-100" alt="...">
+                            <img src="/home-page/img/img-carousel-1.png" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/home-page/img/img-carousel-2.png" class="d-block w-100" alt="...">
+                            <img src="/home-page/img/img-carousel-2.png" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/home-page/img/img-carousel.png" class="d-block w-100" alt="...">
+                            <img src="/home-page/img/img-carousel.png" class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -72,7 +79,7 @@
     <footer class="footer-content">
         &copy;Enzo Muzi - 2024
     </footer>
-    <script src="./assets/menu-page/js/scripts.js"></script>
+    <script src="/menu-page/js/scripts.js"></script>
 </body>
 
 </html>
