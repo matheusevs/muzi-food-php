@@ -1,6 +1,6 @@
 <?php 
     date_default_timezone_set('America/Sao_Paulo');
-    require_once '../routes/Routes.php';
+    require_once __DIR__ . '/../routes/Routes.php';
     $router = new Router();
 ?>
 

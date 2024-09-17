@@ -1,6 +1,6 @@
 <?php 
 
-require_once '../models/Products.php';
+require_once __DIR__ . '/../models/Products.php';
 
 class MenuController {
 

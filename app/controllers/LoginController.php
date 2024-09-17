@@ -1,6 +1,6 @@
 <?php 
 
-require_once '../models/Clients.php';
+require_once __DIR__ . '/../models/Clients.php';
 
 class LoginController {
 

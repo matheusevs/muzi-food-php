@@ -1,6 +1,6 @@
 <?php 
 
-require_once '../models/Contacts.php';
+require_once __DIR__ . '/../models/Contacts.php';
 
 class ContactController {
 
