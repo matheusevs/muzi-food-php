@@ -43,61 +43,43 @@
                 <h1>Registre-se agora mesmo!</h1>
                 <p>Insira suas informações abaixo.</p>
             </div>
-            <form class="row g-3">
+            <form class="row g-3" id="formRegister">
                 <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <label class="form-label">Usuário</label>
+                    <input type="text" class="form-control" name="name">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Confirme sua senha</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label">Usuário</label>
-                    <input type="password" class="form-control" id="inputPassword4">
-                </div>
-                <div class="col-12">
-                    <label for="inputAddress" class="form-label">Endereço</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Rua, Bairro...">
-                </div>
-                <div class="col-12">
-                    <label for="inputAddress2" class="form-label">Endereço 2</label>
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, Casa, Loja...">
+                    <label class="form-label">Senha</label>
+                    <input type="password" class="form-control" name="password">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputCity" class="form-label">Cidade</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <label class="form-label">Confirme sua senha</label>
+                    <input type="password" class="form-control" name="confirm_password">
                 </div>
-                <div class="col-md-4">
-                    <label for="inputState" class="form-label">Estado</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Escolha...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <label for="inputZip" class="form-label">CEP</label>
-                    <input type="text" class="form-control" id="inputZip">
+                <div class="col-6">
+                    <label class="form-label">Telefone</label>
+                    <input type="text" class="form-control" name="phone">
                 </div>
                 <div class="col-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
+                        <input class="form-check-input" type="checkbox" name="terms">
+                        <label class="form-check-label">
                             Aceito os termos e condições
                         </label>
                     </div>
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button type="submit" id="buttonRegister" class="btn btn-primary">Registrar</button>
                 </div>
             </form>
         </div>
     </div>
-    <script src="/menu-page/js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/register-page/js/scripts.js"></script>
 </body>
 
 </html>
