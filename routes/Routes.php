@@ -1,16 +1,26 @@
 <?php
 
+require_once __DIR__ . '/../app/controllers/RegisterController.php';
+
 class Router
 {
     private $method;
     private $route;
     private $url;
+    private $post;
+    private $body;
+    
+    private $registerController;
 
     public function __construct()
     {
         $this->method = $_SERVER['REQUEST_METHOD'];
         $this->route = $_SERVER['REQUEST_URI'];
         $this->url = $_SERVER['HTTP_ORIGIN'] ?? $_SERVER['HTTP_HOST'];
+        $this->post = $_POST;
+        $this->body = json_decode(file_get_contents('php://input'), true);
+
+        $this->registerController = new RegisterController();
 
         $this->routes();
     }
@@ -59,6 +69,14 @@ class Router
                         exit;
                     }
 
+                }
+            break;
+
+            case 'POST':
+                if ($this->route == '/registrar') {
+                    $registerUser = $this->registerController->registerUser($this->post);
+                    echo json_encode($registerUser);
+                    exit;
                 }
             break;
         }
