@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../models/Clients.php';
 
-class RegisterController {
+class RegisterController extends Controller {
 
     private $clientModel;
 
