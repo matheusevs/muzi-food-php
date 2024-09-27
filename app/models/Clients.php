@@ -13,24 +13,9 @@ class Clients {
         $this->connect = $this->con->connection();
     }
 
-    public function insert($user)
+    public function insert($fields, $values)
     {
-        $sql = "
-            INSERT INTO clients
-            (
-                name,
-                email,
-                password,
-                phone
-            )
-            VALUES
-            (
-                '{$user['name']}',
-                '{$user['email']}',
-                sha1('{$user['password']}'),
-                '{$user['phone']}'
-            )
-        ";
+        $sql = "INSERT INTO clients ($fields) VALUES ($values)";
 
         $insert = mysqli_query($this->connect, $sql);
         if(!$insert){
@@ -66,7 +51,6 @@ class Clients {
         }
 
         return $delete;
-
     }
 
     public function findClientByEmail($email)
