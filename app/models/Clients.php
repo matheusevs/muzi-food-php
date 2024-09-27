@@ -58,7 +58,7 @@ class Clients {
 
     public function delete($id){
 
-        $sql = "DELETE FROM users WHERE id = {$id}";
+        $sql = "DELETE FROM clients WHERE id = {$id}";
 
         $delete = mysqli_query($this->connect, $sql);
         if(!$delete){
