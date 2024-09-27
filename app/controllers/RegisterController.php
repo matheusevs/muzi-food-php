@@ -15,9 +15,19 @@ class RegisterController {
     {
         $validateFields = $this->validateFields($request);
         if (!empty($validateFields)) {
-            return ['status' => 'error', 'errors' => $validateFields];
+            return ['status' => 'error', 'message' => $validateFields];
         }
-        return $request;
+
+        $findClientByEmail = $this->clientModel->findClientByEmail($request['email']);
+        if ($findClientByEmail['error']) {
+            return ['status' => 'error', 'message' => $findClientByEmail];
+        }
+
+        if (!$this->clientModel->insert($request)) {
+            return ['status' => 'error', 'message' => 'Erro ao registrar o usuário.'];
+        }
+
+        return ['status' => 'success', 'message' => 'Usuário registrado com sucesso.'];
     }
 
     public function validateFields($data)

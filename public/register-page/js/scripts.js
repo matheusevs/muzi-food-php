@@ -19,8 +19,11 @@ $(function(){
                 let responseJson = JSON.parse(response);
                 $(".error-message").remove();
 
-                if (responseJson.status === 'error') {
-                    $.each(responseJson.errors, function(field, message) {
+                if (responseJson.status == 'success') {
+                    toastr.success(responseJson.message, 'Sucesso');
+                    redirectWithDelay("/login", 1500);
+                } else if (responseJson.status == 'error') {
+                    $.each(responseJson.message, function(field, message) {
                         $(`[name="${field}"]`).after(`<p class="error-message" style="color:red;">${message}</p>`);
                     });
                 }
@@ -30,5 +33,4 @@ $(function(){
             }
         });
     });
-
 });
