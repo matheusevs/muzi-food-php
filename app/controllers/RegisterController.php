@@ -1,6 +1,7 @@
 <?php 
 
 require_once __DIR__ . '/../models/Clients.php';
+require_once __DIR__ . '/../controllers/Controller.php';
 
 class RegisterController extends Controller {
 
