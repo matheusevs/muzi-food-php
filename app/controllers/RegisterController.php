@@ -23,6 +23,17 @@ class RegisterController extends Controller {
             return ['status' => 'error', 'message' => $findClientByEmail];
         }
 
+        $dataUser = [
+            'name'      => $request['name'],
+            'email'     => $request['email'],
+            'password'  => $request['password'],
+            'phone'     => $request['phone'],
+        ];
+
+        $dataUserInsertQuery = $this->prepareInsertQuery($dataUser);
+        var_dump($dataUserInsertQuery);
+        die();
+
         if (!$this->clientModel->insert($request)) {
             return ['status' => 'error', 'message' => 'Erro ao registrar o usuário.'];
         }
