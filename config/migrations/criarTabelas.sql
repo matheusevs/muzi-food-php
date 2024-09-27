@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS clients
 CREATE TABLE IF NOT EXISTS products
 (
     id          INT AUTO_INCREMENT PRIMARY KEY,
-    name        VARCHAR(100)   NOT NULL,
+    name        VARCHAR(100) NOT NULL,
     description TEXT,
     image       TEXT,
     price       DECIMAL(10, 2) NOT NULL,

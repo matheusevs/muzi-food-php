@@ -13,4 +13,43 @@ class Orders {
         $this->connect = $this->con->connection();
     }
 
+    public function insert($fields, $values)
+    {
+        $sql = "INSERT INTO orders ($fields) VALUES ($values)";
+
+        $insert = mysqli_query($this->connect, $sql);
+        if(!$insert){
+            return ['error' => mysqli_connect_error()];
+        }
+        
+        return $insert;
+    }
+
+    public function update($set, $id){
+
+        $sql = "
+            UPDATE orders
+            SET {$set}
+            WHERE id = {$id};
+        ";
+
+        $update = mysqli_query($this->connect, $sql);
+        if(!$update){
+            return ['error' => mysqli_error($this->connect)];
+        }
+
+        return $update;
+    }
+
+    public function delete($id){
+
+        $sql = "DELETE FROM orders WHERE id = {$id}";
+
+        $delete = mysqli_query($this->connect, $sql);
+        if(!$delete){
+            return ['error' => mysqli_connect_error()];
+        }
+
+        return $delete;
+    }
 }
