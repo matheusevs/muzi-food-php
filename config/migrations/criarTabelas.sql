@@ -7,7 +7,8 @@ CREATE TABLE IF NOT EXISTS users
     name        VARCHAR(100) NOT NULL,
     email       VARCHAR(100) NOT NULL UNIQUE,
     password    VARCHAR(255) NOT NULL,
-    record_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    record_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    date_update TIMESTAMP NULL DEFAULT NULL
 );
 
 CREATE TABLE IF NOT EXISTS clients
@@ -17,7 +18,8 @@ CREATE TABLE IF NOT EXISTS clients
     email       VARCHAR(100) NOT NULL UNIQUE,
     password    VARCHAR(255) NOT NULL,
     phone       VARCHAR(15),
-    record_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    record_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    date_update TIMESTAMP NULL DEFAULT NULL
 );
 
 CREATE TABLE IF NOT EXISTS products
@@ -28,6 +30,7 @@ CREATE TABLE IF NOT EXISTS products
     image       TEXT,
     price       DECIMAL(10, 2) NOT NULL,
     record_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    date_update TIMESTAMP NULL DEFAULT NULL,
     id_user     INT,
     FOREIGN KEY (id_user) REFERENCES users (id)
 );
@@ -49,5 +52,6 @@ CREATE TABLE IF NOT EXISTS contacts
     name        VARCHAR(100) NOT NULL,
     email       VARCHAR(100) NOT NULL UNIQUE,
     phone       VARCHAR(15),
-    message     TEXT
+    message     TEXT,
+    record_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
