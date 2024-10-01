@@ -69,7 +69,7 @@
             </div>
             <div class="col-md-6">
                 <div class="d-flex flex-column align-items-center justify-content-center h-100">
-                    <h1 class="text-center">Sabor Artesanal em Cada Mordida TESTE COMMIT SERVIDOR</h1>
+                    <h1 class="text-center">Sabor Artesanal em Cada Mordida</h1>
                     <p class="copy text-center">Delicie-se com nossos irresistíveis lanches artesanais na Muzi's Food. Criatividade, qualidade e sabor se encontram em cada mordida. Descubra uma experiência gastronômica única, onde ingredientes frescos e receitas autênticas se unem para criar momentos de pura satisfação. Visite-nos e experimente o melhor da culinária artesanal em cada prato.</p>
                 </div>
             </div>
