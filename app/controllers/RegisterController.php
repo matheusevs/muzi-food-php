@@ -32,10 +32,8 @@ class RegisterController extends Controller {
         ];
 
         $dataUserInsertQuery = $this->prepareInsertQuery($dataUser);
-        var_dump($dataUserInsertQuery);
-        die();
 
-        if (!$this->clientModel->insert($request)) {
+        if (!$this->clientModel->insert($dataUserInsertQuery)) {
             return ['status' => 'error', 'message' => 'Erro ao registrar o usuário.'];
         }
 

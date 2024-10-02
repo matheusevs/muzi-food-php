@@ -13,8 +13,10 @@ class Clients {
         $this->connect = $this->con->connection();
     }
 
-    public function insert($fields, $values)
+    public function insert($dataUserInsertQuery)
     {
+        $fields = $dataUserInsertQuery[0];
+        $values = $dataUserInsertQuery[1];
         $sql = "INSERT INTO clients ($fields) VALUES ($values)";
 
         $insert = mysqli_query($this->connect, $sql);
